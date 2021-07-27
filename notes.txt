@@ -1,0 +1,29 @@
+﻿použít pandas pro práci s daty
+sloupce: proměnné
+řádky: různá měření/data
+
+df.corr(): funkce korelace, zjistíme, jestli nemáme odvozené proměnné, třeba rozměr v různých jednotkách
+    • mohlo by být mylně interpretováno a mít v budoucnu například několikanásobnou váhu pro rozměr
+    • možné vykreslit korelace v grafu pro mnoho proměnných
+
+sjednotit data:
+např.: False->0, True->1
+kontrola úplnosti dat! : nejsou tam NaN values?
+kontrolovat data, jestli jsou zastoupeny dostatečně všechny případy, které uvažujeme!
+
+ukládat způsob úpravy data
+
+Imputing:
+doplnění chybějících dat
+    • stř. hodnotou, mediánem
+    • doplnit hodnotu expertem
+
+regularization hyperparameter -> brání overfitting (přesně se natrénuje na trénovacích datech, ale pak má špatnou kvalitu na testovacích datech)
+    • sníží přesnost na trénovacích datech, ale může zlepšit přesnost na testovacích
+nevyrovnanost případů (unbalanced classes) - víc případů negativních než pozitivních
+
+
+rozdělení dat na trénink, validaci a testing
+K-fold Cross Validation:
+    • rozdělení tréninkových dat na několik složek, trénovat podle několika a jednu použít jako validační
+    • pak nastavit hyperparametry podle nejlepšího průměru
